@@ -27,7 +27,6 @@ function ResponsiveAppBar() {
                             textDecoration: 'none'
                         }}
                     >
-                        {/* COMENTARIO TESTE */}
                         CARTEIRA DIGITAL
                     </Typography>
 
