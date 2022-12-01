@@ -6,7 +6,6 @@ import IconButton from '@mui/material/IconButton';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 
-
 function ResponsiveAppBar() {
     return (
         <AppBar position="static">
@@ -28,6 +27,7 @@ function ResponsiveAppBar() {
                             textDecoration: 'none'
                         }}
                     >
+                        {/* COMENTARIO TESTE */}
                         CARTEIRA DIGITAL
                     </Typography>
 
@@ -38,8 +38,7 @@ function ResponsiveAppBar() {
                             aria-controls="menu-appbar"
                             aria-haspopup="true"
                             color="inherit"
-                        >
-                        </IconButton>
+                        ></IconButton>
                     </Box>
                     <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
                     <Typography
