@@ -13,13 +13,23 @@ const Home: React.FC = () => {
     const walletRedux = useAppSelector(state => state.wallet);
 
     const handleAddInput = () => {
-        dispatch(inputMoney(input));
-        setInput(0);
+        if (input < 0) {
+            alert('Desculpe, valor inválido!');
+            setInput(0);
+        } else {
+            dispatch(inputMoney(input));
+            setInput(0);
+        }
     };
 
     const handleOutInput = () => {
-        dispatch(outputMoney(output));
-        setOutput(0);
+        if (walletRedux.money - output < 0) {
+            alert('Desculpe, você não tem esse valor!');
+            setOutput(0);
+        } else {
+            dispatch(outputMoney(output));
+            setOutput(0);
+        }
     };
 
     return (
@@ -56,6 +66,7 @@ const Home: React.FC = () => {
                         <TextField
                             label="Saída"
                             fullWidth
+                            type="number"
                             value={output || ''}
                             id="outlined-size-small"
                             size="small"

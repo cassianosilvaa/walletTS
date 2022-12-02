@@ -1,8 +1,8 @@
+import { ThemeProvider } from '@mui/material';
 import { Provider } from 'react-redux';
+import theme from './config/theme/Default';
 import AppRoutes from './routes/AppRoutes';
 import { store } from './store';
-import theme from './config/theme/Default';
-import { ThemeProvider } from '@mui/material';
 
 function App(): JSX.Element {
     return (
