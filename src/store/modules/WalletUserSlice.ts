@@ -16,8 +16,8 @@ const walletUserSlice = createSlice({
             state.money += action.payload;
         },
         outputMoney(state, action: PayloadAction<number>) {
-                state.output.push(action.payload);
-                state.money -= action.payload;
+            state.output.push(action.payload);
+            state.money -= action.payload;
         }
     }
 });
